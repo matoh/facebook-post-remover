@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Facebook Posts Remover</title>
+    <script src="jquery-1.12.0.min.js"></script>
+    <script src="settings.js"></script>
+    <style>
+        body { min-width: 300px; background-color: #425F9C; color: white;}
+        body h1.topLabel{ text-align: center; }
+       .radioBox { margin-left: 90px; }
+       .radioTopLabel { font-variant: small-caps; font-size: 16px; }
+        .clearfix { clear: both; }
+        .textCenter { text-align: center; }
+
+        .cb-enable, .cb-disable, .cb-enable span, .cb-disable span { background: url(switch.gif) repeat-x; display: block; float: left; }
+        .cb-enable span, .cb-disable span { line-height: 30px; display: block; background-repeat: no-repeat; font-weight: bold; }
+        .cb-enable span { background-position: left 30px; padding: 0 10px; color: black; }
+        .cb-disable span { background-position: right 0px;padding: 0 10px; color: black; }
+        .cb-disable.selected { background-position: 0 -30px; }
+        .cb-disable.selected span { background-position: right -30px; color: white; }
+        .cb-enable.selected { background-position: 0 -60px; }
+        .cb-enable.selected span { background-position: left -60px; color: white; }
+        .switch label { cursor: pointer;}
+        .switch input { display: none; }
+
+    </style>
+</head>
+<body>
+
+<div>
+    <h1 class="topLabel">FB Post Settings</h1>
+</div>
+
+<hr>
+
+<div>
+    <p class="textCenter radioTopLabel">Show friend of friends posts ? </p>
+    <div class="radioBox switch">
+
+        <input type="radio" class="radioAction" name="hideFriendsPosts" value="1" id="hideFriendsPosts1">
+        <input type="radio" class="radioAction" name="hideFriendsPosts" value="0" id="hideFriendsPosts0" checked>
+
+
+        <label for="hideFriendsPosts1" class="cb-enable">
+            <span>Enable</span>
+        </label>
+
+        <label for="hideFriendsPosts0" class="cb-disable selected">
+            <span>Disable</span>
+        </label>
+
+    </div>
+
+    <div class="clearfix"></div>
+
+    <p class="textCenter radioTopLabel">Show friend of friends pages ? </p>
+
+    <div class="radioBox switch">
+
+        <input type="radio" class="radioAction" name="hideFriendsPages" value="1" id="hideFriendsPages1">
+        <input type="radio" class="radioAction" name="hideFriendsPages" value="0" id="hideFriendsPages0" checked>
+
+        <label for="hideFriendsPages1" class="cb-enable">
+            <span>Enable</span>
+        </label>
+
+        <label for="hideFriendsPages0" class="cb-disable selected">
+            <span>Disable</span>
+        </label>
+
+    </div>
+
+    <div class="clearfix"></div>
+
+    <p class="textCenter radioTopLabel">Show friend of multiple friends posts ? </p>
+
+    <div class="radioBox switch">
+
+        <input type="radio" class="radioAction" name="hideFriendsMultiple" value="1" id="hideFriendsMultiple1">
+        <input type="radio" class="radioAction" name="hideFriendsMultiple" value="0" id="hideFriendsMultiple0" checked>
+
+        <label for="hideFriendsMultiple1" class="cb-enable">
+            <span>Enable</span>
+        </label>
+
+        <label for="hideFriendsMultiple0" class="cb-disable selected">
+            <span>Disable</span>
+        </label>
+
+    </div>
+
+    <div class="clearfix"></div>
+
+    <p class="textCenter radioTopLabel">Choose post action method:</p>
+
+    <div class="radioBox switch" style="margin-left: 105px;">
+
+        <input type="radio" class="radioAction" name="hideOrFade" value="1" id="hideOrFade1">
+        <input type="radio" class="radioAction" name="hideOrFade" value="0" id="hideOrFade0" checked>
+
+        <label for="hideOrFade1" class="cb-enable">
+            <span>Hide</span>
+        </label>
+
+        <label for="hideOrFade0" class="cb-disable selected">
+            <span>Fade</span>
+        </label>
+
+    </div>
+
+    <div class="clearfix" style="margin-bottom: 10px;"></div>
+
+</div>
+
+</body>
+</html>
